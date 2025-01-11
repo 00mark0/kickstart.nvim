@@ -78,9 +78,9 @@ return {
     },
   },
 
-  {
-    'github/copilot.vim',
-  },
+  --{
+  -- 'github/copilot.vim',
+  -- },
 
   {
     'neovim/nvim-lspconfig',
@@ -88,6 +88,34 @@ return {
       servers = {
         tailwindcss = {},
       },
+    },
+  },
+  --[[
+This is a 
+multi-line comment
+in Lua.
+]]
+  {
+    'Exafunction/codeium.nvim',
+    cmd = 'Codeium',
+    event = 'InsertEnter',
+    build = ':Codeium Auth',
+    opts = {
+      enable_cmp_source = vim.g.ai_cmp,
+      virtual_text = {
+        enabled = not vim.g.ai_cmp,
+        key_bindings = {
+          accept = '<Tab>',
+          next = '<M-]>',
+          prev = '<M-[>',
+        },
+      },
+    },
+  },
+  {
+    'nvim-treesitter/nvim-treesitter',
+    opts = {
+      ensure_installed = { 'lua', 'rust', 'python', 'markdown', 'markdown_inline' },
     },
   },
 }
