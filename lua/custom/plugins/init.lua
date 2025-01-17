@@ -90,11 +90,7 @@ return {
       },
     },
   },
-  --[[
-This is a 
-multi-line comment
-in Lua.
-]]
+  --[[ ]]
   {
     'Exafunction/codeium.nvim',
     cmd = 'Codeium',
