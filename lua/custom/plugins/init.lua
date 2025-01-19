@@ -90,7 +90,7 @@ return {
       },
     },
   },
-  --[[ ]]
+  --[[ 
   {
     'Exafunction/codeium.nvim',
     cmd = 'Codeium',
@@ -108,6 +108,13 @@ return {
       },
     },
   },
+  ]]
+
+  {
+    'sourcegraph/sg.nvim',
+    dependencies = { 'nvim-lua/plenary.nvim' },
+  },
+
   {
     'nvim-treesitter/nvim-treesitter',
     opts = {
