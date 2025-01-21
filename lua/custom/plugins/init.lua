@@ -57,7 +57,7 @@ return {
       },
     },
   },
-  --[[ 
+  --[[ ]]
   {
     'Exafunction/codeium.nvim',
     cmd = 'Codeium',
@@ -74,7 +74,7 @@ return {
         },
       },
     },
-  }, ]]
+  },
 
   {
     'nvim-treesitter/nvim-treesitter',
@@ -83,6 +83,7 @@ return {
     },
   },
 
+  --[[
   -- Add the Ollama-Copilot plugin
   {
     'Jacob411/Ollama-Copilot',
@@ -96,10 +97,10 @@ return {
         temperature = 0.1,
       },
       keymaps = {
-        suggestion = '<A-s>', -- Alt + S for suggestion
+        suggestion = '<A>', -- Alt for suggestion
         reject = '<A-r>', -- Alt + R for reject
         insert_accept = '<A-a>', -- Alt + A for insert accept
       },
     },
-  },
+  }, ]]
 }
