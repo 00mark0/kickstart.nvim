@@ -57,7 +57,7 @@ return {
       },
     },
   },
-  --[[ ]]
+  --[[ 
   {
     'Exafunction/codeium.nvim',
     cmd = 'Codeium',
@@ -74,12 +74,32 @@ return {
         },
       },
     },
-  },
+  }, ]]
 
   {
     'nvim-treesitter/nvim-treesitter',
     opts = {
       ensure_installed = { 'lua', 'rust', 'python', 'markdown', 'markdown_inline' },
+    },
+  },
+
+  -- Add the Ollama-Copilot plugin
+  {
+    'Jacob411/Ollama-Copilot',
+    opts = {
+      model_name = 'starcoder2:latest', -- Change to your preferred model
+      stream_suggestion = true, -- Enable streamed suggestions
+      python_command = '/home/lucifer/myenv/bin/python3', -- Point to the virtual environment's Python
+      filetypes = { 'python', 'lua', 'vim', 'markdown', 'go', 'typescript', 'javascript' },
+      ollama_model_opts = {
+        num_predict = 40,
+        temperature = 0.1,
+      },
+      keymaps = {
+        suggestion = '<A-s>', -- Alt + S for suggestion
+        reject = '<A-r>', -- Alt + R for reject
+        insert_accept = '<A-a>', -- Alt + A for insert accept
+      },
     },
   },
 }
